@@ -13,6 +13,8 @@ public class MTitik {
         T2.printTitik();
         double test = T1.getjarakpusat();
         System.out.println(test);
+        T1.refleksiX();
+        T1.printTitik();
 
     }   
 }
