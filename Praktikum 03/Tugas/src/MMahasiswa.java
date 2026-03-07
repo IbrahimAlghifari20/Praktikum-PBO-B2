@@ -3,7 +3,8 @@
  *Pembuat: Muhammad Ibrahim Alghifari
  *Tanggal: 7 Maret 2026 */
 public class MMahasiswa {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         MataKuliah PBO = new MataKuliah("PBO", "Pemrograman Berorientasi Objek", 3);
         MataKuliah MBD = new MataKuliah("MBD", "Manajemen Basis Data", 3);
         MataKuliah STRUKDAT = new MataKuliah("SD", "Struktur Data", 3);

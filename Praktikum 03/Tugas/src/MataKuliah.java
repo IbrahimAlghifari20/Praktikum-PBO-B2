@@ -9,39 +9,47 @@ public class MataKuliah {
     private int sks;
     
     /* Method */
-    public MataKuliah() {
+    public MataKuliah() 
+    {
         idMatKul = "0";
         nama = "Matkul";
         sks = 0;
     }
     
-    public MataKuliah(String idMatKul, String nama, int sks) {
+    public MataKuliah(String idMatKul, String nama, int sks) 
+    {
         this.idMatKul = idMatKul;
         this.nama = nama;
         this.sks = sks;
     }
     
-    public String getIdMatKul() {
+    public String getIdMatKul() 
+    {
         return idMatKul;
     }
     
-    public String getNama() {  
+    public String getNama() 
+    {  
         return nama;
     }
     
-    public int getSks() {
+    public int getSks() 
+    {
         return sks;
     }
     
-    public void setIdMatKul(String idMatKul) {
+    public void setIdMatKul(String idMatKul) 
+    {
         this.idMatKul = idMatKul;
     }
     
-    public void setName(String nama) {  
+    public void setName(String nama) 
+    {  
         this.nama = nama;
     }
     
-    public void setSks(int sks) {
+    public void setSks(int sks) 
+    {
         this.sks = sks;
     }
 }

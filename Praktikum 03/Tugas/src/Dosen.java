@@ -9,39 +9,47 @@ public class Dosen {
     private String prodi;
     
     /* Method */
-    public Dosen() {
+    public Dosen() 
+    {
         nip = "0";
         nama = "Nama";
         prodi = "Prodi";
     }
     
-    public Dosen(String nip, String nama, String prodi) {
+    public Dosen(String nip, String nama, String prodi) 
+    {
         this.nip = nip;
         this.nama = nama;
         this.prodi = prodi;
     }
     
-    public String getNip() {
+    public String getNip() 
+    {
         return nip;
     }
     
-    public String getNama() {
+    public String getNama() 
+    {
         return nama;
     }
     
-    public String getProdi() {
+    public String getProdi() 
+    {
         return prodi;
     }
     
-    public void setNip(String nip) {
+    public void setNip(String nip) 
+    {
         this.nip = nip;
     }
     
-    public void setNama(String nama) {
+    public void setNama(String nama) 
+    {
         this.nama = nama;
     }
     
-    public void setProdi(String prodi) {
+    public void setProdi(String prodi) 
+    {
         this.prodi = prodi;
     }
 }

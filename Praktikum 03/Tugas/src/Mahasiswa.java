@@ -14,85 +14,104 @@ public class Mahasiswa {
     private Kendaraan kendaraan;
     
     /* Method */
-    public Mahasiswa() {
+    public Mahasiswa() 
+    {
         this.listMatKul = new ArrayList<>();
     }
     
-    public Mahasiswa(String nim, String nama, String prodi) {
+    public Mahasiswa(String nim, String nama, String prodi) 
+    {
         this.nim = nim;
         this.nama = nama;
         this.prodi = prodi;
         this.listMatKul = new ArrayList<>();
     }
     
-    public String getNim() {
+    public String getNim() 
+    {
         return nim;
     }
     
-    public String getNama() {
+    public String getNama() 
+    {
         return nama;
     }
     
-    public String getProdi() {
+    public String getProdi() 
+    {
         return prodi;
     }
     
-    public Dosen getDosenWali() {
+    public Dosen getDosenWali() 
+    {
         return dosenWali;
     }
     
-    public Kendaraan getKendaraan() {
+    public Kendaraan getKendaraan(){ 
+    
         return kendaraan;
     }
     
-    public void setNim(String nim) {
+    public void setNim(String nim) 
+    {
         this.nim = nim;
     }
     
-    public void setNama(String nama) {
+    public void setNama(String nama) 
+    {
         this.nama = nama;
     }
     
-    public void setProdi(String prodi) {
+    public void setProdi(String prodi) 
+    {
         this.prodi = prodi;
     }
     
-    public void setDosenWali(Dosen dosenWali) {
+    public void setDosenWali(Dosen dosenWali) 
+    {
         this.dosenWali = dosenWali;
     }
     
-    public void setKendaraan(Kendaraan kendaraan) {
+    public void setKendaraan(Kendaraan kendaraan) 
+    {
         this.kendaraan = kendaraan;
     }
     
-    public void addMatKul(MataKuliah newMatKul) {
+    public void addMatKul(MataKuliah newMatKul) 
+    {
         listMatKul.add(newMatKul);
     }
     
-    public int getJumlahSKS() {
+    public int getJumlahSKS() 
+    {
         int totalSKS = 0;
-        for (MataKuliah mk : listMatKul) {
-            totalSKS += mk.getSks();
-        }
+        for (int i = 0; i < listMatKul.size(); i++) 
+            {
+                totalSKS += listMatKul.get(i).getSks();
+            }
         return totalSKS;
     }
     
-    public int getJumlahMatKul() {
+    public int getJumlahMatKul() 
+    {
         return listMatKul.size();
     }
     
-    public void printMhs() {
+    public void printMhs() 
+    {
         System.out.println("Nim: " + nim);
         System.out.println("Nama: " + nama);
         System.out.println("Prodi: " + prodi);
     }
     
-    public void printDetailMhs() {
+    public void printDetailMhs() 
+    {
         System.out.println("Nim: " + nim);
         System.out.println("Nama: " + nama);
         System.out.println("Prodi: " + prodi);
         int i;
-        for(i = 0; i < listMatKul.size(); i++) {
+        for(i = 0; i < listMatKul.size(); i++) 
+            {
             System.out.println(listMatKul.get(i).getNama());
         }
     }

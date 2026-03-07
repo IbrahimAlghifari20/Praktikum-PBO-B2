@@ -8,29 +8,35 @@ public class Kendaraan {
     private String jenis;
     
     /* Method */
-    public Kendaraan() {
+    public Kendaraan() 
+    {
         noPlat = "0";
         jenis = "Standar";
     }
     
-    public Kendaraan(String noPlat, String jenis) {
+    public Kendaraan(String noPlat, String jenis) 
+    {
         this.noPlat = noPlat;
         this.jenis = jenis;
     }
     
-    public String getNoPlat() {
+    public String getNoPlat() 
+    {
         return noPlat;
     }
     
-    public String getJenis() {
+    public String getJenis() 
+    {
         return jenis;
     }
     
-    public void setNoPlat(String noPlat) {
+    public void setNoPlat(String noPlat) 
+    {
         this.noPlat = noPlat;
     }
     
-    public void setJenis(String jenis) {
+    public void setJenis(String jenis) 
+    {
         this.jenis = jenis;
     }
 }
