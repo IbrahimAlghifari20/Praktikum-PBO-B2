@@ -5,7 +5,6 @@
 import java.util.ArrayList;
 
 public class Mahasiswa {
-    /* ATRIBUT */
     private String nim;
     private String nama;
     private String prodi;
@@ -13,7 +12,6 @@ public class Mahasiswa {
     private Dosen dosenWali;
     private Kendaraan kendaraan;
     
-    /* Method */
     public Mahasiswa() 
     {
         this.listMatKul = new ArrayList<>();
@@ -25,6 +23,15 @@ public class Mahasiswa {
         this.nama = nama;
         this.prodi = prodi;
         this.listMatKul = new ArrayList<>();
+    }
+    
+    public Mahasiswa(String nim, String nama, String prodi, String noPlat, String jenis) 
+    {
+        this.nim = nim;
+        this.nama = nama;
+        this.prodi = prodi;
+        this.listMatKul = new ArrayList<>();
+        this.kendaraan = new Kendaraan(noPlat, jenis);
     }
     
     public String getNim() 
@@ -47,11 +54,6 @@ public class Mahasiswa {
         return dosenWali;
     }
     
-    public Kendaraan getKendaraan(){ 
-    
-        return kendaraan;
-    }
-    
     public void setNim(String nim) 
     {
         this.nim = nim;
@@ -72,11 +74,6 @@ public class Mahasiswa {
         this.dosenWali = dosenWali;
     }
     
-    public void setKendaraan(Kendaraan kendaraan) 
-    {
-        this.kendaraan = kendaraan;
-    }
-    
     public void addMatKul(MataKuliah newMatKul) 
     {
         listMatKul.add(newMatKul);
@@ -86,9 +83,9 @@ public class Mahasiswa {
     {
         int totalSKS = 0;
         for (int i = 0; i < listMatKul.size(); i++) 
-            {
-                totalSKS += listMatKul.get(i).getSks();
-            }
+        {
+            totalSKS += listMatKul.get(i).getSks();
+        }
         return totalSKS;
     }
     
@@ -109,10 +106,14 @@ public class Mahasiswa {
         System.out.println("Nim: " + nim);
         System.out.println("Nama: " + nama);
         System.out.println("Prodi: " + prodi);
-        int i;
-        for(i = 0; i < listMatKul.size(); i++) 
-            {
+        for(int i = 0; i < listMatKul.size(); i++) 
+        {
             System.out.println(listMatKul.get(i).getNama());
+        }
+        if (kendaraan != null) 
+        {
+            System.out.println("No Plat : " + kendaraan.getNoPlat());
+            System.out.println("Jenis : " + kendaraan.getJenis());
         }
     }
 }
