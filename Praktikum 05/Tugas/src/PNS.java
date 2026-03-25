@@ -8,19 +8,17 @@ import java.time.Period;
 public class PNS extends Manusia implements Pajak {
     private String nip;
     private static int counterPNS = 0;
-    private int A;
+
     
     public PNS(String nama, LocalDate tgl_mulai_kerja, String alamat, double pendapatan, String nip) {
         super(nama, tgl_mulai_kerja, alamat, pendapatan);
         this.nip = nip;
-        this.A = 0;
         counterPNS++;
     }
     
     public PNS(String nama, LocalDate tgl_mulai_kerja, double pendapatan, String nip) {
         super(nama, tgl_mulai_kerja, "", pendapatan);
         this.nip = nip;
-        this.A = 0;
         counterPNS++;
     }
     
@@ -40,7 +38,7 @@ public class PNS extends Manusia implements Pajak {
     public int hitungMasaKerja() {
         LocalDate now = LocalDate.now();
         Period period = Period.between(tgl_mulai_kerja, now);
-        return period.getYears() + A;
+        return period.getYears() + 0;
     }
     
     @Override

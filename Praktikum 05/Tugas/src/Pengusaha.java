@@ -8,12 +8,10 @@ import java.time.Period;
 public class Pengusaha extends Manusia implements Pajak {
     private String npwp;
     private static int counterPengusaha = 0;
-    private int B;
     
     public Pengusaha(String nama, LocalDate tgl_mulai_kerja, String alamat, double pendapatan, String npwp) {
         super(nama, tgl_mulai_kerja, alamat, pendapatan);
         this.npwp = npwp;
-        this.B = 4;
         counterPengusaha++;
     }
     
@@ -33,7 +31,7 @@ public class Pengusaha extends Manusia implements Pajak {
     public int hitungMasaKerja() {
         LocalDate now = LocalDate.now();
         Period period = Period.between(tgl_mulai_kerja, now);
-        return period.getYears() + B;
+        return period.getYears() + 4;
     }
     
     @Override
